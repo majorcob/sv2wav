@@ -24,13 +24,13 @@ parser = argparse.ArgumentParser(description=desc.strip())
 parser.add_argument("infile", type=is_project,
     help="SunVox project file (.sunvox)")
 parser.add_argument("-o", "--out", type=str, metavar="FILENAME",
-    help="output .wav file")
+    help="custom output filename")
 parser.add_argument("-s", "--sample", type=int, default=44100, metavar="RATE",
     help="audio sampling rate, in Hz [default 44100]")
 parser.add_argument("-b", "--buffer", type=int, default=1024, metavar="SIZE",
-    help="buffer size, in frames [default 1024]")
+    help="audio buffer size, in frames [default 1024]")
 parser.add_argument("--bytes", type=int, default=2, choices=[2, 4],
-    help="bytes per sample: 2=int16, 4=float32 [default 2]")
+    help="bytes per sample: 2=PCM, 4=float [default 2]")
 args = parser.parse_args()
 
 # Config from arguments
