@@ -1,6 +1,6 @@
-# Sv2Wav
+# Vox2Wav
 
-A Python script to automate export of [SunVox](https://www.warmplace.ru/soft/sunvox/) project files. Pretty much just an adaptation of [the library's C example #4](https://github.com/warmplace/sunvox_dll/blob/master/examples/c/test4.c) with command-line arguments.
+A Python script to automate export of [SunVox](https://www.warmplace.ru/soft/sunvox/) project files. Pretty much just an adaptation of [the library's C examples](https://github.com/warmplace/sunvox_dll/blob/master/examples/c/test4.c) with command-line arguments.
 
 Currently only supports Windows as I don't have access to testing hardware for other platforms.
 
@@ -9,7 +9,7 @@ Currently only supports Windows as I don't have access to testing hardware for o
 Make sure to `git clone --recursive` to grab the SunVox lib submodule.
 
 ```sh
-python sv2wav.py [-h] [-o FILENAME] [-s RATE] [-b SIZE] [--bytes {2,4}] infile
+python vox2wav.py [-h] [-o FILENAME] [-s RATE] [-b SIZE] [--bytes {2,4}] infile
 ```
 
 - `infile`: SunVox project file (`.sunvox`); **required**
